@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*
     Theme Name: Altair Theme
-    Author: Thando Ncube
+    Author: Level Ground Creatives
     Version: 1.0
     Description: This is a regular theme basic with all the features necessary to display content on your homepage.
 */
@@ -19,6 +19,7 @@ body {
 main {
     max-width: 1840px;
     margin: 0 auto;
+    background-color: #ffffff;
 }
 header {
 	width: 100%;
@@ -26,6 +27,9 @@ header {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
 }
 
 a {
@@ -127,7 +131,7 @@ li {
         opacity: 1;
     }
     50% {
-        opacity: 0;
+        opacity: 0.3;
     }
     100% {
         opacity: 1;
@@ -149,21 +153,21 @@ section.altair-content__video {
     width: 60%;
     height: 600px;
     margin: 50px auto;
-    position: relative;
     background-color: #efefef;
     .altair__video {
+        width: 80%;
         height: 400px;
-        position: absolute;
-        left: 23%;
-        top: 20%;
-        background-color: #0f0d0f;
+        display: block;
         object-fit: contain;
-        box-shadow: 4px 15px 40px #a7a7a7;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
     .altair__video > video {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        margin: 13.2% auto;
+        box-shadow: 4px 15px 40px #a7a7a7;
     }
 }
 
@@ -199,9 +203,8 @@ section.altair-content__video {
 }
 
 .scoll-to-appear div {
-    font-size: 1.3em;
     font-weight: 800;
-    animation: appear linear;
+    animation: appear forwards;
     animation-timeline: view();
     animation-range: entry 10% cover 50%;
 }
@@ -211,4 +214,40 @@ footer {
     text-align: center;
     height: 200px;
     line-height: 200px;
+}
+
+@media screen and (max-width: 900px) {
+    .main-header h1 {
+        font-size: 4em;
+    }
+    .promotions {
+        width: 100%;
+        hr + span {
+            font-size: 0.68em;
+        }
+    }
+    .companies {
+        padding: 0 20px;
+        .image-container {
+            width: 80px;
+            height: 65px;
+        }
+    }
+
+    .altair-content__tagline {
+        width: 80%;
+        top: 50px;
+        .scoll-to-appear {
+            font-size: 1.3em;
+            left: 15%;
+        }
+    }
+
+    section.altair-content__video {
+        width: 100%;
+        .altair__video {
+            top: 5%;
+            left: 8%;
+        }
+    }
 }
