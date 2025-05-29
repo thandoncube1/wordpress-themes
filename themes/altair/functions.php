@@ -3,6 +3,7 @@
 function altair_files() {
     // Main stylesheet
     wp_enqueue_style('style', get_stylesheet_uri());
+    wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/index.js', null, null, true);
 }
 
 add_action('wp_enqueue_scripts', 'altair_files');

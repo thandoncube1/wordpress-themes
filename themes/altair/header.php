@@ -20,4 +20,11 @@
                 wp_nav_menu($args);
             ?>
         </nav>
+         <!-- Mobile Menu Toggle Button -->
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+            <h3>Menu</h3>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
