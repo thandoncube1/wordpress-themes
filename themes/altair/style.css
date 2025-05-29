@@ -1,0 +1,16 @@
+/*
+    Theme Name: Altair Theme
+    Author: Thando Ncube
+    Version: 1.0
+    Description: This is a regular theme basic with all the features necessary to display content on your homepage.
+*/
+body {
+    color: tomato;
+}
+footer {
+    background-color: rgb(33, 33, 33);
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
