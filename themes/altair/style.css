@@ -1,16 +1,214 @@
+@charset "utf-8";
 /*
     Theme Name: Altair Theme
     Author: Thando Ncube
     Version: 1.0
     Description: This is a regular theme basic with all the features necessary to display content on your homepage.
 */
-body {
-    color: tomato;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
 }
-footer {
-    background-color: rgb(33, 33, 33);
-    height: 100px;
-    position: relative;
-    bottom: 0;
+body {
+	font-size: 16px;
+}
+main {
+    max-width: 1840px;
+    margin: 0 auto;
+}
+header {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+    color: black;
+    transition: all;
+}
+
+a:hover, a:active {
+    color: slategray;
+    transition: .5s color ease-in;
+}
+
+li {
+	list-style-type: none;
+}
+
+.site-nav ul li {
+	float: left;
+	margin-right: 20px;
+}
+
+.main-header {
+    padding: 50px 0;
     width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.main-header > span {
+    background-color: #f2f1f3;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: .9em;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: 300;
+    a {
+        color: #6b45d0;
+    }
+}
+
+.main-header h1 {
+    font-size: 5em;
+    line-height: .9em;
+    font-weight: 700;
+    color: #0f0d0f;
+}
+
+.main-header button {
+    margin: 40px 0;
+    width: 180px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    background-color: #b395f5;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.promotions {
+    width: 60%;
+    margin: 80px auto;
+    hr {
+        position: relative;
+        z-index: -1;
+        top: 14px;
+    }
+    hr + span {
+        background-color: #ffffff;
+        padding: 0 20px;
+        font-size: 0.85em;
+        font-weight: 400;
+    }
+}
+
+.companies {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    .image-container {
+        width: 100px;
+        height: 100px;
+    }
+    .image-container img {
+        filter: brightness(0) saturate(100%);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.image-animation {
+    animation: fadeInOut 6s infinite;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+.image-animation:hover {
+    animation-play-state: paused;
+}
+
+section.altair-content__video {
+    width: 60%;
+    height: 600px;
+    margin: 50px auto;
+    position: relative;
+    background-color: #efefef;
+    .altair__video {
+        height: 400px;
+        position: absolute;
+        left: 23%;
+        top: 20%;
+        background-color: #0f0d0f;
+        object-fit: contain;
+        box-shadow: 4px 15px 40px #a7a7a7;
+    }
+    .altair__video > video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.altair-content__tagline {
+    width: 60%;
+    height: 400px;
+    position: relative;
+    top: 100px;
+    margin-bottom: 100px;
+    .scoll-to-appear {
+        width: 60%;
+        position: absolute;
+        left: 33%;
+        font-size: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@keyframes appear {
+    0% { opacity: 0; }
+    10% { opacity: 0.1; }
+    20% { opacity: 0.2; }
+    30% { opacity: 0.3; }
+    40% { opacity: 0.4; }
+    50% { opacity: 0.5; }
+    60% { opacity: 0.6; }
+    70% { opacity: 0.7; }
+    80% { opacity: 0.8; }
+    90% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+.scoll-to-appear div {
+    font-size: 1.3em;
+    font-weight: 800;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
 }
