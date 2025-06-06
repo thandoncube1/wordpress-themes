@@ -1,8 +1,8 @@
 <?php
 
 get_header();
-
-the_title();
-the_content();
-
+echo "<section class=container>";
+echo "<h1>" . the_title() . "</h1>";
+echo "<article>" . the_content() . "</article>";
+echo "</section>";
 get_footer();

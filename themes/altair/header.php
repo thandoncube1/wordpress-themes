@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <header>
+    <header><section class="header-content">
         <h1><a href="<?php echo home_url(); ?>"><strong>Altair</strong>Custom</a></h1>
         <!-- Navigation -->
         <nav class="site-nav">
@@ -27,4 +27,5 @@
             <span></span>
             <span></span>
         </div>
+            </section>
     </header>
